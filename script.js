@@ -4,8 +4,12 @@ const close = document.getElementById("close-btn");
 const container = document.getElementById("container");
 const tauContainer = document.getElementById("tau-container");
 const audio = document.getElementById("audio");
+const closeTau = document.getElementById("close-tau");
 tau.addEventListener("click", () => {
   tauContainer.classList.add("tau");
+});
+closeTau.addEventListener("click", () => {
+  tauContainer.classList.remove("tau");
 });
 open.addEventListener("click", () => {
   container.classList.add("active");
@@ -14,7 +18,7 @@ open.addEventListener("click", () => {
 });
 close.addEventListener("click", () => {
   container.classList.remove("active");
-  tauContainer.classList.remove("tau");
+  audio.pause();
 });
 
 function createHeart() {
