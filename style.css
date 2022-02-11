@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,100&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("../toast-notif/public/img.jpg");
+  background-size: cover;
+}
+
+.body-card {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
+audio {
+  visibility: hidden;
+}
+button {
+  margin: 1rem;
+  background-color: rgb(85, 3, 3);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 6rem;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transform: translate(0px, 3px);
+  transition: transform 0.1s linear;
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.popup-container a {
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+.popup-container.tau {
+  display: flex;
+}
+.popup-container.active {
+  display: flex;
+  background-image: url("../toast-notif/public/img.jpg");
+}
+.popup {
+  position: relative;
+  background-color: #fff;
+  width: 500px;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup {
+  text-align: center;
+}
+.popup button {
+  background-color: #fff;
+  color: rgb(172, 3, 3);
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.heart {
+  position: fixed;
+  top: -1vh;
+  font: 2rem;
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
